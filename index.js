@@ -20,3 +20,13 @@ function deleteFromObjectByKey(object, key) {
   return clone
 }
 
+function destructivelyDeleteFromObjectByKey(object, key) {
+  return 
+}
+ describe('destructivelyDeleteFromObjectByKey(object, key)', function() {
+    it('returns object without the delete key/value pair', function() {
+      var obj = { prop: 1 }
+      var newObj = destructivelyDeleteFromObjectByKey(obj, 'prop');
+
+      expect(newObj['prop']).toBe(undefined)
+    })
